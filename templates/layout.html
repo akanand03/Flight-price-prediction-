@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .container {
+        flex: 1;
+        margin-top: 50px;
+      }
+      .navbar {
+        background-color: #007bff;
+      }
+      .navbar-brand img {
+        max-height: 30px;
+        margin-right: 10px;
+      }
+      .jumbotron {
+        background: linear-gradient(120deg, #1d2b64 0%, #f8cdda 100%);
+        color: white;
+        padding: 2rem 1rem;
+        border-radius: 15px;
+      }
+      .btn-primary {
+        background-color: #f76b1c;
+        border-color: #f76b1c;
+      }
+      footer {
+        text-align: center;
+        padding: 1rem 0;
+        background: #1d2b64;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="#">
+        <img src="{{ url_for('static', filename='logo.webp') }}" alt="Logo" />
+        Flight Price Prediction
+      </a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('predict') }}">Predict</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      {% with messages = get_flashed_messages() %} {% if messages %} {% for
+      message in messages %}
+      <div class="alert alert-info">{{ message }}</div>
+      {% endfor %} {% endif %} {% endwith %} {% block content %}{% endblock %}
+    </div>
+    <footer>&copy; 2024 Flight Price Prediction. All Rights Reserved.</footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
