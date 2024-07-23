@@ -11,7 +11,7 @@ from wtforms.validators import DataRequired
 
 
 # getting the data
-train = pd.read_csv("data/train.csv")
+train = pd.read_csv("data/Train.csv")
 val = pd.read_csv("data/val.csv")
 X_data = pd.concat([train, val], axis=0).drop(columns="price")
 
