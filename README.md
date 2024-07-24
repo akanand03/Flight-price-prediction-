@@ -51,7 +51,7 @@ This project is a web-based application that predicts flight prices based on var
 
 1. Navigate to `http://127.0.0.1:5000/home` in your web browser.
 2. Enter the flight details in the form provided.
-3. Click "Predict Now" to see the predicted flight price with a plane take-off animation.
+3. Click "Predict Now" to see the predicted flight price.
 
 ## Credits
 
