@@ -5,18 +5,17 @@ Leverage the power of Machine Learning to predict flight prices using a Random F
 
 ## Description
 
-This project is a web-based application that predicts flight prices based on various flight-related parameters. The user-friendly interface built with Flask allows users to input flight details and get the predicted price. Engaging animations and a professional design enhance the user experience.
+This project is a web-based application designed to predict flight prices based on various flight-related parameters. With a user-friendly interface built using Flask, users can input flight details and receive accurate predictions. The interface is enhanced with engaging animations and a professional design for an improved user experience.
 
 ## Key Features
 
-- **Machine Learning Model:** Utilizes a Random Forest model for predicting flight prices.
-- **User Interface:** Built with Flask, featuring forms for user inputs and engaging animations.
-- **Deployment:** Deployed using Gunicorn for serving the Flask application.
+- **Machine Learning Model:** Utilizes a Random Forest model to predict flight prices.
+- **User Interface:** Developed using Flask, featuring intuitive forms for user inputs and engaging animations.
+- **Deployment:** The application is deployed using Gunicorn, hosted on Render for a seamless experience.
 
 ## Technologies Used
 
 - **Backend:** Python, Flask
-- **Frontend:** HTML, CSS, Bootstrap
 - **Machine Learning:** Random Forest
 - **Deployment:** Gunicorn, Render
 
@@ -24,15 +23,21 @@ This project is a web-based application that predicts flight prices based on var
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository_url>
-   cd flight-price-prediction
+   git clone https://github.com/akanand03/Flight-price-prediction-.git
+   cd Flight-price-prediction-
    ```
 
 2. **Create and activate a virtual environment:**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-   ```
+   - On Linux/Mac:
+     ```bash
+     python3 -m venv venv
+     source venv/bin/activate
+     ```
+   - On Windows:
+     ```bash
+     python -m venv venv
+     venv\Scripts\activate
+     ```
 
 3. **Install the required packages:**
    ```bash
